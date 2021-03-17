@@ -12,9 +12,9 @@ Creating a sas7bdat directly from r using dullesresearch free s-jdbc driver
 
          1. Supports long variable names
          2. Appears so far to be lossless in windows (sas floats > r floast > sas floats)
-         3. The dbWriteTable function has the ODBS resriction and limits the lenght of
+         3. The dbWriteTable function has the ODBC resriction and limits the lenght of
             character variables to 255 bytes.
-         4. Hav not tested date, time or other formats.
+         4. Have not tested date, time or other formats. (dont consider this a issue. I like to work without formats)
 
 
     See
@@ -25,7 +25,7 @@ Creating a sas7bdat directly from r using dullesresearch free s-jdbc driver
     https://dullesresearch.com/products/
     Scroll down to S-JDBC
 
-    Documetation
+    Documentation
     https://www.dullesresearch.com/wp-content/uploads/2017/11/Carolina-S-JDBC-2.1-User-Guide.pdf
     https://dullesresearch.com/wp-content/uploads/2020/04/Carolina-S-JDBC-2.4-User-Guide-v20.pdf
     https://dullesresearch.com/wp-content/uploads/2017/10/Carolina-S-JDBC-Product-Sheet.pdf
@@ -62,7 +62,7 @@ Creating a sas7bdat directly from r using dullesresearch free s-jdbc driver
     /*
     Up to 40 obs SD1.HAVE total obs=19
 
-      LONG(length=10,000       NAME       SEX    AGE    HEIGHT    WEIGHT
+      LONG(length=10,000)      NAME       SEX    AGE    HEIGHT    WEIGHT
 
      12345678901234567890...   Joyce       F      11     51.3       50.5
      12345678901234567890      Louise      F      12     56.3       77.0
@@ -116,7 +116,7 @@ Creating a sas7bdat directly from r using dullesresearch free s-jdbc driver
     ;
     Up to 40 obs SD1.HAVE total obs=19
 
-      LONG(length=10,000       NAME       SEX    AGE    HEIGHT    WEIGHT
+      LONG(length=255)          NAME       SEX    AGE    HEIGHT    WEIGHT
 
      12345678901234567890...   Joyce       F      11     51.3       50.5
      12345678901234567890      Louise      F      12     56.3       77.0
